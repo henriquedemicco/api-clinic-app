@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from adress import models
+from address import models
 
 class EnderecosSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Ad
+        model = models.Enderecos
         fields = ['id_endereco',
                   'paciente',
                   'rua',

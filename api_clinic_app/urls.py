@@ -18,13 +18,15 @@ from django.urls import path, include
 
 from rest_framework import routers
 
-from core.api import viewsets as PacientViewSets
-from adress.api import viewsets as AdressViewSets
+from core.api import viewsets as PacienteViewSets
+from address.api import viewsets as EnderecosViewSets
+from consultations.api import viewsets as ConsultasViewSets
 
 route = routers.DefaultRouter()
 
-route.register(r'pacientes', PacientViewSets.AdViewSet, basename="Pacientes")
-route.register(r'enderecos', AdressViewSets.AdViewSet, basename="Enderecos")
+route.register(r'pacientes', PacienteViewSets.PacienteViewSet, basename="Pacientes")
+route.register(r'enderecos', EnderecosViewSets.EnderecosViewSet, basename="Enderecos")
+route.register(r'consultas', ConsultasViewSets.ConsultasViewSet, basename="Consultas")
 
 urlpatterns = [
     path('admin/', admin.site.urls),

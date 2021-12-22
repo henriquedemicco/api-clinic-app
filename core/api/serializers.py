@@ -3,11 +3,10 @@ from core import models
 
 class PacienteSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Ad
+        model = models.Paciente
         fields = ['id_paciente',
                   'nome',
                   'sexo',
-                  'enderecos',
                   'cpf',
                   'celular',
                   'data_nascimento',

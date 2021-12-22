@@ -1,12 +1,13 @@
 from django.db import models
-from core.models import Pacientes
+from core.models import Paciente
 from uuid import uuid4
+from django.db.models import *
 
 # Create your models here.
 
 class Enderecos(models.Model):
     id_endereco = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    paciente = models.ForeignKey(Pacientes, on_delete=models.CASCADE)
+    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
     rua = models.CharField(max_length=150)
     numero = models.IntegerField()
     bairro = models.CharField(max_length=150)
