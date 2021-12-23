@@ -11,7 +11,7 @@ class Paciente(models.Model):
     cpf = models.CharField(max_length=100)
     celular = models.CharField(max_length=100)
     data_nascimento = models.DateField()
-
+    email = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nome
