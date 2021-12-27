@@ -15,4 +15,7 @@ class Paciente(models.Model):
 
     def __str__(self):
         return self.nome
+    
+    def data_format(self):
+        return self.data_nascimento.strftime('%d/%m/%Y')
 
