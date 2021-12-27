@@ -9,6 +9,7 @@ class PacienteSerializer(serializers.ModelSerializer):
                   'sexo',
                   'cpf',
                   'celular',
+                  'data_nascimento',
                   'data_format',
                   'email',
                 ]

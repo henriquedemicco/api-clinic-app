@@ -7,5 +7,7 @@ class ConsultasSerializer(serializers.ModelSerializer):
         fields = ['id_consulta',
                   'paciente',
                   'info',
-                  'data_format',
+                  'data',
+                  'data_date',
+                  'data_time',
                 ]

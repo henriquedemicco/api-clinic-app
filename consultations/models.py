@@ -16,5 +16,8 @@ class Consultation(models.Model):
     def __str__(self):
         return self.data
     
-    def data_format(self):
+    def data_date(self):
         return self.data.strftime('%d/%m/%Y')
+    
+    def data_time(self):
+        return self.data.strftime('%H:%M')
