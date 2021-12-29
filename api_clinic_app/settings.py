@@ -58,6 +58,11 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+REST_FRAMEWORK = {  
+    'DATE_FORMAT': '%d/%m/%Y',
+    'DATETIME_FORMAT': "%d/%m/%Y %H:%M:%S"
+}
+
 ROOT_URLCONF = 'api_clinic_app.urls'
 
 TEMPLATES = [
