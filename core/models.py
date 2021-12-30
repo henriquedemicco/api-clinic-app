@@ -10,12 +10,10 @@ class Paciente(models.Model):
     sexo = models.CharField(max_length=100)
     cpf = models.CharField(max_length=100)
     celular = models.CharField(max_length=100)
-    data_nascimento = models.DateField()
+    data_nascimento = models.CharField(max_lenght=10)
     email = models.CharField(max_length=90)
 
     def __str__(self):
         return self.nome
-    
-    def data_format(self):
-        return self.data_nascimento.strftime('%d/%m/%Y')
+
 

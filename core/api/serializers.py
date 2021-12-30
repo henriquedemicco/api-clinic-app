@@ -10,6 +10,5 @@ class PacienteSerializer(serializers.ModelSerializer):
                   'cpf',
                   'celular',
                   'data_nascimento',
-                  'data_format',
                   'email',
                 ]
