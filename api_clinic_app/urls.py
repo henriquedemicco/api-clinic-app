@@ -18,6 +18,8 @@ from django.urls import path, include
 
 from rest_framework import routers
 
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
 from core.api import viewsets as PacienteViewSets
 from address.api import viewsets as EnderecosViewSets
 from consultations.api import viewsets as ConsultasViewSets
@@ -30,5 +32,7 @@ route.register(r'consultas', ConsultasViewSets.ConsultasViewSet, basename="Consu
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('token/', TokenObtainPairView.as_view()),
+    path('token/refresh/', TokenRefreshView.as_view()),
     path('', include(route.urls))
 ]
